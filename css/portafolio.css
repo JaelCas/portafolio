@@ -197,7 +197,7 @@ footer .redes a:hover {
     #menu-toggle {
         display: none;
     }
-}
+    
     .menu-icon {
         display: block;
         font-size: 28px;
@@ -235,4 +235,4 @@ footer .redes a:hover {
         display: block;
         text-align: left;
     }
-
+}
