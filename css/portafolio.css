@@ -1,0 +1,238 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400; 600; 800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(to top, rgba(64, 75, 81, 0.8), rgba(30,35,38,1)),
+    url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+*{
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container-header{
+    background: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.container-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20pxs;
+}
+
+.container-header header .logo a{
+    font-family: "Righteos";
+    font-size: 36px;
+    color: #1cb698;
+    text-decoration: none;
+}
+
+.container-header header ul{
+    display: flex;
+    list-style: none;
+}
+
+.container-header header nav ul li a{
+    text-align: center;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.container-header header nav ul li a:hover {
+    color: #1cb698;
+}
+
+.portafolio h2{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    padding: 10px 0;
+    color: #109d88;
+    margin: 30px 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 0;
+}
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1cb698;
+    margin-left: auto;
+    border-radius: 20px;
+}
+
+.ecard {
+    background: rgb(18, 11, 11);
+    border-radius: 35px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 20px 20px 20px;
+    transition: transform 0.3s ease;
+}
+
+.ecard img {
+    width: 100%;
+    border-radius: 30px;
+    height: 270px;
+}
+
+.ecard .contenido {
+    color: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ecard h2 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.ecard p {
+    font-size: 14px;
+    color: #fff;
+}
+
+
+.ecard:hover {
+    transform: scale(1.05);
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    background-color: #1cb698;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.links a:hover{
+    background-color: #1cb698;
+}
+
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+footer .redes {
+    margin-bottom: 20px;
+}
+
+footer .redes a {
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 10px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+footer .redes a:hover {
+    background: #1cb698;
+    border-color: #1cb698;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+}
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: #00ffcc;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 300;
+    }
+    /*menu oculto */
+    .container-header header .nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px 0;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        z-index: 250;
+    }
+    /*mostrar menu al activar */
+    #menu-toggle:checked ~ .nav ul {
+        display: flex;
+    } 
+    .container-header header .nav ul li {
+        margin: 5px 0;
+    }
+    .container-header header .nav ul li a {
+        color: #fff;
+        padding: 10px 15px;
+        display: block;
+        text-align: left;
+    }
+

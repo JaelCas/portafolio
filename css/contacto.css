@@ -1,0 +1,191 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400; 600; 800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container-header {
+    background: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1cb698;
+    margin-left: auto;
+    border-radius: 20px;
+}
+
+.container-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.container-header header .logo a {
+    font-family: "Righteous", cursive;
+    font-size: 36px;
+    color: #1cb698;
+    text-decoration: none;
+}
+
+.container-header header ul {
+    display: flex;
+    list-style: none;
+}
+
+.container-header header nav ul li a {
+    text-align: center;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.container-header header nav ul li a:hover {
+    color: #1cb698;
+}
+
+.contacto {
+    text-align: center;
+    padding: 50px 5%;
+}
+
+.contacto h2 {
+    color: #2dd4bf;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contacto p {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Formulario */
+  .formulario {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .formulario input,
+  .formulario textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .formulario button {
+    background: #2dd4bf;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .formulario button:hover {
+    background: #22b3a5;
+  }
+  
+  /* Mapa */
+  .mapa iframe {
+    flex: 1 1 300px;
+    min-height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    height: 400px;
+    width: 400px;
+  }
+
+  @media (max-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+}
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: #00ffcc;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 300;
+    }
+    /*menu oculto */
+    .container-header header .nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px 0;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        z-index: 250;
+    }
+    /*mostrar menu al activar */
+    #menu-toggle:checked ~ .nav ul {
+        display: flex;
+    } 
+    .container-header header .nav ul li {
+        margin: 5px 0;
+    }
+    .container-header header .nav ul li a {
+        color: #fff;
+        padding: 10px 15px;
+        display: block;
+        text-align: left;
+    }   
